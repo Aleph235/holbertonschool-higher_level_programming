@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for item in range(97,123):
-    if item == 101 or item == 113:
+for number in range(97, 123):
+    if number == 101 or number == 113:
         continue
     else:
-        print(chr(item), end="")
+        print("{}".format(chr(number)), end="")
