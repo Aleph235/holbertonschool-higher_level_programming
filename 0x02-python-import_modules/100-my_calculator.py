@@ -3,7 +3,7 @@ import sys
 from calculator_1 import add, sub, mul, div
 if __name__ == "__main__":
     n = len(sys.argv)
-    operator = ('+','-','*','/')
+    operator = ('+', '-', '*', '/')
     def apply_operation(a, b):
         if sys.argv[2] == '+':
             return add(a, b)
@@ -26,4 +26,3 @@ if __name__ == "__main__":
         a = int(sys.argv[1])
         b = int(sys.argv[3])
         print(f'{a} {sys.argv[2]} {b} = {apply_operation(a, b)}')
-
