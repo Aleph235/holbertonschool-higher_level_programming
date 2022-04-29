@@ -17,7 +17,7 @@ if __name__ == "__main__":
             except ZeroDivisionError as e:
                 print("You can not divide by 0")
     if n != 4:
-        print("Usage: ./.100-my_calculator.py <a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     elif sys.argv[2] not in operator:
         print("Unknown operator. Available operators: +, -, * and /")
