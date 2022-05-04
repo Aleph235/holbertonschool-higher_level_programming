@@ -3,6 +3,5 @@ def uniq_add(my_list=[]):
     uniq_list = set(my_list)
     result = 0
     for element in uniq_list:
-        print(element)
         result += element
     return result
