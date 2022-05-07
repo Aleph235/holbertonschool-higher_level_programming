@@ -5,5 +5,5 @@ def complex_delete(a_dictionary, value):
         if new_dict[key] == value:
             del new_dict[key]
         else:
-            break
+            return new_dict
     return new_dict
