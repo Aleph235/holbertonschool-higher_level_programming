@@ -9,7 +9,7 @@ def list_division(my_list_1, my_list_2, list_length):
                 print("division by 0")
                 result.append(0)
                 continue
-            except TypeError:
+            except (TypeError, ValueError):
                 print("wrong type")
                 result.append(0)
                 continue
