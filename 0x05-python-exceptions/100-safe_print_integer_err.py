@@ -3,10 +3,14 @@ import sys
 
 
 def safe_print_integer_err(value):
-    err_message = "Exception: Unknown format code 'd' for object of type 'str'"
+    message_1 = "Exception: Unknown format code 'd' for object of type 'str'"
+    message_2 = "unsupported format string passed to tuple.__format__"
     try:
         print("{:d}".format(value))
         return True
-    except (ValueError, TypeError):
-        print(err_message, file=sys.stderr)
+    except (ValueError):
+        print(message_1, file=sys.stderr)
+        return False
+    except (TypeError):
+        print(message_2, file=sys.stderr)
         return False
