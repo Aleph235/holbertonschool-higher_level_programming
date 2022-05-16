@@ -4,7 +4,7 @@ import sys
 
 def safe_print_integer_err(value):
     message_1 = "Exception: Unknown format code 'd' for object of type 'str'"
-    message_2 = "Exception: unsupported format string passed to tuple.__format__"
+    message_2 = "Exception: Unsupported format string passed to tuple."
     try:
         print("{:d}".format(value))
         return True
