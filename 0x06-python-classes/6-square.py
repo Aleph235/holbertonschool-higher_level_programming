@@ -46,7 +46,9 @@ class Square:
     def my_print(self):
         """prints in stdout the square with the character # and position:
         if size is equal to 0, print an empty line"""
-        if self.__size == 0 and self.__position[1] <= 0:
+        if self.__size == 0:
             print()
+        for j in range(self.__position[1]):
+            print("\n" * self.__position[1])
         for i in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
