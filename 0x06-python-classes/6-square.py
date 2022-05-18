@@ -33,7 +33,7 @@ class Square:
     def position(self, value):
         """set the position property with error checks"""
         for elem in value:
-            if elem < 0:
+            if type(value) != tuple or len(value) != 2 or elem < 0:
                 raise TypeError("position must be a tuple\
                         of 2 positive integers")
             else:
