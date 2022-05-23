@@ -52,7 +52,7 @@ class Rectangle:
         """print the rectangle with the character #"""
         shape = ''
         if self.__width == 0 or self.__height == 0:
-            shape = "\n"
+            shape = ""
         else:
             for i in range(self.__height):
                 shape += ("#" * self.__width + "\n")
