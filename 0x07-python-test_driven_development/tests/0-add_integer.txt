@@ -37,7 +37,18 @@ Test case #0: Testing two negative ints
 	>>> add_integer(0)
 	98
 	>>> add_integer(1e10000, 2)
-	cannot convert float infinity to integer
+	Traceback (most recent call last):
+		a = int(a)
+	OverflowError: cannot convert float infinity to integer
 	>>> add_integer("a","B")
-	a must be an integer
-	b must be an integer
+	Traceback (most recent call last):
+		raise TypeError("a must be an interger")
+	TypeError: a must be an interger
+	>>> add_integer(5, 'b')
+	Traceback (most recent call last):
+		raise TypeError("b must be an interger")
+	TypeError: b must be an interger
+	>>> add_interger(q, 4)
+	Traceback (most recent call last):
+	NameError: name 'q' is not defined		
+
