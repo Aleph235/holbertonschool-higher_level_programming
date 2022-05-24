@@ -39,7 +39,7 @@ class Rectangle:
 
     def area(self):
         """Calculates the area of the rectangle"""
-        return str(self.__width * self.__height)
+        return self.__width * self.__height
 
     def perimeter(self):
         """Calculates the perimeter of the rectangle"""
@@ -52,8 +52,10 @@ class Rectangle:
         """print the rectangle with the character #"""
         shape = ''
         if self.__width == 0 or self.__height == 0:
-            shape = ""
+            return shape
         else:
             for i in range(self.__height):
-                shape += ("#" * self.__width + "\n")
-        return shape
+                shape += ("#" * self.__width)
+                if i != self.__height - 1:
+                    shape += '\n'
+            return shape
