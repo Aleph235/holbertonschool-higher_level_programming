@@ -63,9 +63,3 @@ class Rectangle:
     def __repr__(self):
         """represent the object"""
         return f'Rectangle("{self.width}","{self.height}")'
-
-    def __del__(self):
-        """delete an object"""
-        print("Bye rectangle...")
-        del self.__width
-        del self.__height
