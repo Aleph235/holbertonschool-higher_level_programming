@@ -62,4 +62,4 @@ class Rectangle:
 
     def __repr__(self):
         """represent the object"""
-        return f'Rectangle("{self.width}","{self.height}")'
+        return "Rectangle("{}","{}")".format(self.__width, self.__height)
