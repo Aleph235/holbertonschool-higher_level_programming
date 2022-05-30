@@ -1,5 +1,18 @@
 BaseGeometry module
 ===================
+
+-Function Description-
+======================
+validate value if it is an int and strictly positive
+
+-Operation-
+===========
+• area() is not implemented
+
+• <name> must be an integer
+
+• <name> must be greater than 0
+
 Using integer_validator 
 -------------------
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
