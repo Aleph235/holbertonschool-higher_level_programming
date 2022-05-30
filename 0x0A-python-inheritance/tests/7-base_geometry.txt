@@ -1,6 +1,18 @@
 BaseGeometry module
 ===================
 
+-Function Description-
+======================
+validate value if it is an int and strictly positive
+
+-Operation-
+===========
+• area() is not implemented
+
+• <name> must be an integer
+
+• <name> must be greater than 0
+
 Using integer_validator 
 
 -------------------
@@ -10,6 +22,11 @@ Using integer_validator
 >>> bg.integer_validator("width", 89)
 >>> try:
 ...	bg.integer_validator("name", "John")
+... except Exception as e:
+... 	print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+>>> try:
+...	bg.integer_validator("name", [2])
 ... except Exception as e:
 ... 	print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] name must be an integer
