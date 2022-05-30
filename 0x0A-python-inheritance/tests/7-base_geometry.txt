@@ -5,16 +5,6 @@ BaseGeometry module
 ======================
 validate value if it is an int and strictly positive
 
--Operation-
-===========
-• area() is not implemented
-
-• <name> must be an integer
-
-• <name> must be greater than 0
-
-Using integer_validator 
--------------------
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
