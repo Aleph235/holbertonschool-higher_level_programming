@@ -16,4 +16,4 @@ class MyList(list):
                 j -= 1
 
             sorted_l[j + 1] = a
-        print(sorted_l)
+        return print(sorted_l)
