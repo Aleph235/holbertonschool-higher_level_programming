@@ -11,10 +11,10 @@ class Rectangle(BaseGeometry):
         self.__height = height
         super().__init__()
 
-    def area(self.width, self.height):
+    def area(self):
         """calculates the area of a Rectangle"""
-        return self.width * self.height
+        return self.__width * self.__height
 
     def __str__(self):
         """print the retangle"""
-        return f"[Rectangle] {width}/{height}"
+        return f"[Rectangle] {self.__width}/{self.__height}"
