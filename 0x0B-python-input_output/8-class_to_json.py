@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """returns json serialization of an object"""
+import json
 
 
 def class_to_json(obj):
