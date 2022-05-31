@@ -1,5 +1,5 @@
 #!/bin/python3
-"""Return pascal_triangle for n"""
+"""Creates a list of lists for pascal_triangle"""
 
 
 def binomialCoeff(n, k):
