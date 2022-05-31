@@ -11,7 +11,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
     def to_json(self):
         """retrieves dict repr of student instance"""
         return self.__dict__
