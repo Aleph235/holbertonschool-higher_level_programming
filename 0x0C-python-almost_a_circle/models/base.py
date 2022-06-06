@@ -3,7 +3,7 @@
 
 
 class Base:
-    """base class"""
+    """Base: Class define base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
