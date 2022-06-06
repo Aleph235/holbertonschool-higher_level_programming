@@ -7,7 +7,7 @@ from base import Base
 
 class Rectangle(Base):
     """class rectangle"""
-    def __init__(self, width, height, x=0, y=0,id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """rectangle initialisation"""
         self.width = width
         self.height = height
@@ -70,12 +70,12 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-    
+
     @property
     def area(self):
         """calculates the area of the triangle"""
         return self.width * self.height
-    
+
     def display(self):
         """displays the rectangle with character #"""
         if self.area == 0:
@@ -85,30 +85,16 @@ class Rectangle(Base):
                 print()
         for i in range(self.height):
             print(" " * self.x + "#" * self.width)
-    
+
     def __str__(self):
         """print class rectangle"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
-    
-    def update(self, *args, **kwargs ):
+        return f"[Rectangle] ({self.id})"/
+        " {self.x}/{self.y} - {self.width}/{self.height}"
+
+    def update(self, *args, **kwargs):
         list = ["id", "width", "height", "x", "y"]
         for i in range(len(args)):
-            setattr(self, list[i], args[i]) 
+            setattr(self, list[i], args[i])
         for key, value in kwargs.items():
             if key in list:
                 setattr(self, key, value)
-    
-r1 = Rectangle(10, 10, 10, 10)
-print(r1)
-#r1.update(89)
-#print(r1)
-#r1.update(89, 2)
-#print(r1)
-#r1.update(89, 2, 3)
-#print(r1)
-r1.update(89, 2, 3, 4)
-print(r1)
-#r1.update(89, 2)
-#print(r1)
-r1.update(x=1, height=2, y=3, width=4, id=9)
-print(r1)
