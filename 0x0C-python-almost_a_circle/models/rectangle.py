@@ -6,7 +6,6 @@ from models.base import Base
 class Rectangle(Base):
     """class rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """rectangle initialisation"""
         self.width = width
         self.height = height
         self.x = x
@@ -90,6 +89,7 @@ class Rectangle(Base):
         " {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
+        """update rectangle instance"""
         list = ["id", "width", "height", "x", "y"]
         for i in range(len(args)):
             setattr(self, list[i], args[i])
