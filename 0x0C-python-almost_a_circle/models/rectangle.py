@@ -1,8 +1,6 @@
 #!/bin/python3
 """class rectangle"""
-from matplotlib import widgets
-from sympy import li
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
