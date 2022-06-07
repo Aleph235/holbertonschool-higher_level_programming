@@ -21,7 +21,6 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """set width property with error checks"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -30,12 +29,10 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """get class property height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """set height property with error checks"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -44,12 +41,10 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """get class property x"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """set x property with error checks"""
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -58,12 +53,10 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """get class property y"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """set y property with error checks"""
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
