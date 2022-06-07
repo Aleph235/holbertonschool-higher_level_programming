@@ -16,7 +16,6 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """get class property width"""
         return self.__width
 
     @width.setter
@@ -65,7 +64,6 @@ class Rectangle(Base):
 
     @property
     def area(self):
-        """calculates the area of the triangle"""
         return self.width * self.height
 
     def display(self):
