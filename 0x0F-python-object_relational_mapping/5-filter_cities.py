@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""list all cities of given argument"""
 from sys import argv
 import MySQLdb
 if __name__ == "__main__":
