@@ -3,7 +3,6 @@
 """
 import sys
 from model_state import Base, State
-
 from sqlalchemy import create_engine, Session
 
 if __name__ == "__main__":
@@ -12,6 +11,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state in session.query(State).filter_by(State.id == 1):
+    for state in session.query(State).order_by(State.id).first():
         print("{}: {}".format(state.id, state.name))
     session.close()
