@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lists the first State objects from the database hbtn_0e_6_usa 
+"""lists the first State objects from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
@@ -12,6 +12,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state in session.query(State).order_by(State.id).[1]:
+    for state in session.query(State).filter_by(State.id == 1):
         print("{}: {}".format(state.id, state.name))
     session.close()
