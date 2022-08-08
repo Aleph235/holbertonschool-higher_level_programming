@@ -3,9 +3,9 @@
 argument from the database hbtn_0e_6_usa
 """
 import sys
-from model_state import Base, State
-
-from sqlalchemy import create_engine, Session
+from model_state import State, Base
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
@@ -14,7 +14,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    mystate = session.query(State.id).filter(State.name == sys.argv[4])
+    mystate = session.query(State.id).filter(State.name == sys.argv[4]).first()
     if(mystate):
         print("{}".format(mystate.id))
     else:
