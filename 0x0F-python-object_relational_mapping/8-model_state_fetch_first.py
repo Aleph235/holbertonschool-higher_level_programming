@@ -19,4 +19,4 @@ if __name__ == "__main__":
     if my_state is None:
         print("Nothing")
     else:
-        print(f"{my_state.id}: {my_state.mame}")
+        print("{}: {}".format(my_state.id, my_state.name))
