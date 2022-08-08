@@ -4,8 +4,8 @@ a from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
-
-from sqlalchemy import create_engine, Session
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     session = Session(engine)
     for state in session.query(State)\
-                        .filter(State.like('%a%')):
+                        .filter(State.name.contains('a')):
         session.delete(State)
     session.commit()
     session.close()
